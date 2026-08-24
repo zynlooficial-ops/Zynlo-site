@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Camisas | ZYNLO Multimarcas</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<header class="topo">
+
+    <a href="index.html" class="logo">
+
+        <strong>ZYNLO</strong>
+
+        <span>multimarcas</span>
+
+    </a>
+
+
+    <nav class="menu">
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="camisas.html" class="ativo">
+            Camisas
+        </a>
+
+        <a href="bermudas.html">
+            Bermudas & Shorts
+        </a>
+
+        <a href="ofertas.html">
+            Ofertas
+        </a>
+
+    </nav>
+
+
+    <button
+        class="botao-carrinho"
+        onclick="abrirCarrinho()">
+
+        🛒
+
+        <span id="contadorCarrinho">
+            0
+        </span>
+
+    </button>
+
+</header>
+
+
+<main>
+
+    <section class="pagina-topo">
+
+        <span>
+            COLEÇÃO
+        </span>
+
+        <h1>
+            Camisas
+        </h1>
+
+        <p>
+            Encontre sua próxima camisa na ZYNLO.
+        </p>
+
+    </section>
+
+
+    <section class="secao">
+
+        <div class="produtos-grid">
+
+
+            <article class="produto-card">
+
+                <div class="produto-foto">
+
+                    <img
+                        src="camisa-puma-azul.png"
+                        alt="Camisa Puma Azul">
+
+                </div>
+
+
+                <div class="produto-info">
+
+                    <span class="produto-categoria">
+                        CAMISA
+                    </span>
+
+                    <h3>
+                        Camisa Puma Azul
+                    </h3>
+
+                    <strong class="produto-preco">
+                        R$ 49,90
+                    </strong>
+
+
+                    <div class="tamanhos">
+
+                        <span>
+                            Tamanho:
+                        </span>
+
+                        <button
+                            onclick="selecionarTamanho(this, 'Camisa Puma Azul')">
+                            P
+                        </button>
+
+                        <button
+                            onclick="selecionarTamanho(this, 'Camisa Puma Azul')">
+                            M
+                        </button>
+
+                        <button
+                            onclick="selecionarTamanho(this, 'Camisa Puma Azul')">
+                            G
+                        </button>
+
+                        <button
+                            onclick="selecionarTamanho(this, 'Camisa Puma Azul')">
+                            GG
+                        </button>
+
+                    </div>
+
+
+                    <p class="tamanho-escolhido">
+                        Nenhum tamanho selecionado
+                    </p>
+
+
+                    <span class="disponivel">
+                        ● Disponível
+                    </span>
+
+
+                    <button
+                        class="botao-comprar"
+                        onclick="comprarProduto(
+                            'Camisa Puma Azul',
+                            '49,90'
+                        )">
+
+                        Comprar pelo WhatsApp
+
+                    </button>
+
+
+                    <button
+                        class="botao-carrinho-produto"
+                        onclick="adicionarCarrinho(
+                            'Camisa Puma Azul',
+                            49.90,
+                            'camisa-puma-azul.png'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div id="fundoCarrinho" class="fundo-carrinho" onclick="fecharCarrinho()"></div>
+
+
+<aside id="carrinho" class="carrinho">
+
+    <div class="carrinho-topo">
+
+        <h2>
+            Seu carrinho
+        </h2>
+
+        <button onclick="fecharCarrinho()">
+            ✕
+        </button>
+
+    </div>
+
+
+    <div id="listaCarrinho" class="lista-carrinho">
+
+        <p class="carrinho-vazio">
+            Seu carrinho está vazio.
+        </p>
+
+    </div>
+
+
+    <div class="carrinho-final">
+
+        <strong>
+            Total:
+            <span id="totalCarrinho">
+                R$ 0,00
+            </span>
+        </strong>
+
+        <button
+            class="botao-comprar"
+            onclick="finalizarCarrinho()">
+
+            Comprar pelo WhatsApp
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<footer class="rodape">
+
+    <div class="logo">
+
+        <strong>ZYNLO</strong>
+
+        <span>multimarcas</span>
+
+    </div>
+
+
+    <div class="rodape-links">
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="camisas.html">
+            Camisas
+        </a>
+
+        <a href="bermudas.html">
+            Bermudas & Shorts
+        </a>
+
+        <a href="ofertas.html">
+            Ofertas
+        </a>
+
+    </div>
+
+
+    <a
+        class="whatsapp-rodape"
+        href="https://wa.me/5582994335034"
+        target="_blank">
+
+        WhatsApp
+
+    </a>
+
+
+    <p>
+        © 2026 ZYNLO Multimarcas
+    </p>
+
+</footer>
+
+
+<script src="game.js"></script>
+
+</body>
+</html>

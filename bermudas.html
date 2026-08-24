@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Bermudas & Shorts | ZYNLO</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topo">
+
+    <a href="index.html" class="logo">
+
+        <strong>ZYNLO</strong>
+
+        <span>multimarcas</span>
+
+    </a>
+
+
+    <nav class="menu">
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="camisas.html">
+            Camisas
+        </a>
+
+        <a href="bermudas.html" class="ativo">
+            Bermudas & Shorts
+        </a>
+
+        <a href="ofertas.html">
+            Ofertas
+        </a>
+
+    </nav>
+
+
+    <button
+        class="botao-carrinho"
+        onclick="abrirCarrinho()">
+
+        🛒
+
+        <span id="contadorCarrinho">
+            0
+        </span>
+
+    </button>
+
+</header>
+
+
+<main>
+
+    <section class="pagina-topo">
+
+        <span>
+            COLEÇÃO
+        </span>
+
+        <h1>
+            Bermudas & Shorts
+        </h1>
+
+        <p>
+            Em breve novos produtos.
+        </p>
+
+    </section>
+
+
+    <section class="secao">
+
+        <div class="sem-produtos">
+
+            <div>
+                🩳
+            </div>
+
+            <h2>
+                Novidades chegando
+            </h2>
+
+            <p>
+                Ainda não temos bermudas ou shorts cadastrados.
+                Assim que você tiver os produtos, vamos colocar aqui.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div
+    id="fundoCarrinho"
+    class="fundo-carrinho"
+    onclick="fecharCarrinho()">
+</div>
+
+
+<aside id="carrinho" class="carrinho">
+
+    <div class="carrinho-topo">
+
+        <h2>
+            Seu carrinho
+        </h2>
+
+        <button onclick="fecharCarrinho()">
+            ✕
+        </button>
+
+    </div>
+
+
+    <div id="listaCarrinho" class="lista-carrinho">
+
+        <p class="carrinho-vazio">
+            Seu carrinho está vazio.
+        </p>
+
+    </div>
+
+
+    <div class="carrinho-final">
+
+        <strong>
+
+            Total:
+
+            <span id="totalCarrinho">
+                R$ 0,00
+            </span>
+
+        </strong>
+
+
+        <button
+            class="botao-comprar"
+            onclick="finalizarCarrinho()">
+
+            Comprar pelo WhatsApp
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+<footer class="rodape">
+
+    <div class="logo">
+
+        <strong>ZYNLO</strong>
+
+        <span>multimarcas</span>
+
+    </div>
+
+
+    <div class="rodape-links">
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="camisas.html">
+            Camisas
+        </a>
+
+        <a href="bermudas.html">
+            Bermudas & Shorts
+        </a>
+
+        <a href="ofertas.html">
+            Ofertas
+        </a>
+
+    </div>
+
+
+    <a
+        class="whatsapp-rodape"
+        href="https://wa.me/5582994335034"
+        target="_blank">
+
+        WhatsApp
+
+    </a>
+
+
+    <p>
+        © 2026 ZYNLO Multimarcas
+    </p>
+
+</footer>
+
+
+<script src="game.js"></script>
+
+</body>
+
+</html>
