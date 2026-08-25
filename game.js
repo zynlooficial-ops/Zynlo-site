@@ -422,7 +422,15 @@ function finalizarCarrinho() {
 
 }
 
+/* =====================================
+   TAMANHO INDISPONÍVEL
+===================================== */
 
+function tamanhoIndisponivel(botao) {
+
+    alert("Esse tamanho está indisponível no momento.");
+
+           }
 /* =====================================
    INICIAR
 ===================================== */
