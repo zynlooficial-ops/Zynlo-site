@@ -778,3 +778,7 @@ button {
     text-decoration: line-through;
     cursor: not-allowed;
         }
+
+.foto-short-claro {
+    transform: rotate(90deg) scale(1.15);
+}
