@@ -1,39 +1,72 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>ZYNLO Multimarcas</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+
 <header class="topo">
 
     <a href="index.html" class="logo">
+
         <strong>ZYNLO</strong>
+
         <span>multimarcas</span>
+
     </a>
 
+
     <nav class="menu">
-        <a href="index.html">Início</a>
-        <a href="camisas.html">Camisas</a>
-        <a href="bermudas.html">Bermudas & Shorts</a>
-        <a href="ofertas.html">Ofertas</a>
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="camisas.html">
+            Camisas
+        </a>
+
+        <a href="bermudas.html">
+            Bermudas & Shorts
+        </a>
+
+        <a href="ofertas.html">
+            Ofertas
+        </a>
+
     </nav>
 
-    <button class="botao-carrinho" onclick="abrirCarrinho()">
+
+    <button
+        class="botao-carrinho"
+        onclick="abrirCarrinho()">
+
         🛒
-        <span id="contadorCarrinho">0</span>
+
+        <span id="contadorCarrinho">
+            0
+        </span>
+
     </button>
 
 </header>
 
 
 <main>
+
 
     <!-- HERO -->
 
@@ -54,13 +87,18 @@
                 Moda masculina selecionada para você.
             </p>
 
-            <a href="#produtos" class="botao-principal">
+            <a
+                href="#produtos"
+                class="botao-principal">
+
                 VER PRODUTOS
+
             </a>
 
         </div>
 
     </section>
+
 
 
     <!-- CATEGORIAS -->
@@ -69,7 +107,9 @@
 
         <div class="titulo-secao">
 
-            <span>EXPLORE</span>
+            <span>
+                EXPLORE
+            </span>
 
             <h2>
                 Encontre seu estilo
@@ -80,7 +120,12 @@
 
         <div class="categorias">
 
-            <a href="camisas.html" class="categoria-card">
+
+            <!-- CAMISAS -->
+
+            <a
+                href="camisas.html"
+                class="categoria-card">
 
                 <div class="icone">
                     👕
@@ -97,7 +142,12 @@
             </a>
 
 
-            <a href="bermudas.html" class="categoria-card">
+
+            <!-- BERMUDAS -->
+
+            <a
+                href="bermudas.html"
+                class="categoria-card">
 
                 <div class="icone">
                     🩳
@@ -114,7 +164,12 @@
             </a>
 
 
-            <a href="ofertas.html" class="categoria-card oferta-card">
+
+            <!-- OFERTAS -->
+
+            <a
+                href="ofertas.html"
+                class="categoria-card oferta-card">
 
                 <div class="icone">
                     🔥
@@ -130,18 +185,25 @@
 
             </a>
 
+
         </div>
 
     </section>
 
 
-    <!-- PRODUTOS -->
 
-    <section class="secao produtos-secao" id="produtos">
+    <!-- PRODUTOS EM DESTAQUE -->
+
+    <section
+        class="secao produtos-secao"
+        id="produtos">
+
 
         <div class="titulo-secao">
 
-            <span>DESTAQUES</span>
+            <span>
+                DESTAQUES
+            </span>
 
             <h2>
                 Produtos em destaque
@@ -150,78 +212,108 @@
         </div>
 
 
+
         <div class="produtos-grid">
 
 
-            <!-- CAMISA PUMA -->
+            <!-- =========================
+                 CAMISA PUMA
+            ========================== -->
 
             <article class="produto-card">
+
 
                 <div class="produto-foto">
 
                     <img
                         src="camisa-puma-azul.png"
-                        alt="Camisa Puma Azul"
-                    >
+                        alt="Camisa Puma Azul">
 
                 </div>
 
 
+
                 <div class="produto-info">
+
 
                     <span class="produto-categoria">
                         CAMISA
                     </span>
 
+
                     <h3>
                         Camisa Puma Azul
                     </h3>
+
 
                     <strong class="produto-preco">
                         R$ 49,90
                     </strong>
 
 
+
                     <div class="tamanhos">
 
-    <span>
-        Tamanho:
-    </span>
+                        <span>
+                            Tamanho:
+                        </span>
 
-    <button
-        class="tamanho-indisponivel"
-        onclick="tamanhoIndisponivel(this)">
-        P
-    </button>
 
-    <button
-        class="tamanho-indisponivel"
-        onclick="tamanhoIndisponivel(this)">
-        M
-    </button>
+                        <button
+                            onclick="tamanhoIndisponivel(this)"
+                            class="tamanho-indisponivel">
 
-    <button
-        onclick="selecionarTamanho(this, 'Camisa Puma Azul')">
-        G
-    </button>
+                            P
 
-    <button
-        class="tamanho-indisponivel"
-        onclick="tamanhoIndisponivel(this)">
-        GG
-    </button>
+                        </button>
+
+
+                        <button
+                            onclick="tamanhoIndisponivel(this)"
+                            class="tamanho-indisponivel">
+
+                            M
+
+                        </button>
+
+
+                        <button
+                            onclick="selecionarTamanho(
+                                this,
+                                'Camisa Puma Azul'
+                            )">
+
+                            G
+
+                        </button>
+
+
+                        <button
+                            onclick="tamanhoIndisponivel(this)"
+                            class="tamanho-indisponivel">
+
+                            GG
+
+                        </button>
 
                     </div>
 
 
+
                     <p class="tamanho-escolhido">
+
                         Nenhum tamanho selecionado
+
                     </p>
 
 
+
                     <span class="disponivel">
+
                         ● Disponível
+
                     </span>
+
 
 
                     <button
@@ -236,6 +328,7 @@
                     </button>
 
 
+
                     <button
                         class="botao-carrinho-produto"
                         onclick="adicionarCarrinho(
@@ -247,6 +340,114 @@
                         🛒 Adicionar ao carrinho
 
                     </button>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================
+                 SHORT JEANS CLARO
+            ========================== -->
+
+            <article class="produto-card">
+
+
+                <div class="produto-foto">
+
+                    <img
+                        src="short-jeans-claro.jpg"
+                        alt="Short Jeans Claro">
+
+                </div>
+
+
+
+                <div class="produto-info">
+
+
+                    <span class="produto-categoria">
+                        SHORT
+                    </span>
+
+
+                    <h3>
+                        Short Jeans Claro
+                    </h3>
+
+
+                    <strong class="produto-preco">
+                        R$ 89,90
+                    </strong>
+
+
+
+                    <div class="tamanhos">
+
+                        <span>
+                            Tamanho:
+                        </span>
+
+
+                        <button
+                            onclick="selecionarTamanho(
+                                this,
+                                'Short Jeans Claro'
+                            )">
+
+                            38
+
+                        </button>
+
+                    </div>
+
+
+
+                    <p class="tamanho-escolhido">
+
+                        Nenhum tamanho selecionado
+
+                    </p>
+
+
+
+                    <span class="disponivel">
+
+                        ● Disponível
+
+                    </span>
+
+
+
+                    <button
+                        class="botao-comprar"
+                        onclick="comprarProduto(
+                            'Short Jeans Claro',
+                            '89,90',
+                            '38'
+                        )">
+
+                        Comprar pelo WhatsApp
+
+                    </button>
+
+
+
+                    <button
+                        class="botao-carrinho-produto"
+                        onclick="adicionarCarrinho(
+                            'Short Jeans Claro',
+                            89.90,
+                            'short-jeans-claro.jpg',
+                            '38'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
 
                 </div>
 
@@ -260,11 +461,27 @@
 </main>
 
 
-<!-- CARRINHO -->
 
-<div id="fundoCarrinho" class="fundo-carrinho" onclick="fecharCarrinho()"></div>
+<!-- =========================
+     FUNDO DO CARRINHO
+========================== -->
 
-<aside id="carrinho" class="carrinho">
+<div
+    id="fundoCarrinho"
+    class="fundo-carrinho"
+    onclick="fecharCarrinho()">
+</div>
+
+
+
+<!-- =========================
+     CARRINHO
+========================== -->
+
+<aside
+    id="carrinho"
+    class="carrinho">
+
 
     <div class="carrinho-topo">
 
@@ -272,30 +489,48 @@
             Seu carrinho
         </h2>
 
-        <button onclick="fecharCarrinho()">
+
+        <button
+            onclick="fecharCarrinho()">
+
             ✕
+
         </button>
 
     </div>
 
 
-    <div id="listaCarrinho" class="lista-carrinho">
+
+    <div
+        id="listaCarrinho"
+        class="lista-carrinho">
 
         <p class="carrinho-vazio">
+
             Seu carrinho está vazio.
+
         </p>
 
     </div>
 
 
+
     <div class="carrinho-final">
 
+
         <strong>
+
             Total:
+
             <span id="totalCarrinho">
+
                 R$ 0,00
+
             </span>
+
         </strong>
+
+
 
         <button
             class="botao-comprar"
@@ -305,38 +540,59 @@
 
         </button>
 
+
     </div>
 
 </aside>
 
 
+
+<!-- =========================
+     RODAPÉ
+========================== -->
+
 <footer class="rodape">
 
+
     <div class="logo">
-        <strong>ZYNLO</strong>
-        <span>multimarcas</span>
+
+        <strong>
+            ZYNLO
+        </strong>
+
+        <span>
+            multimarcas
+        </span>
+
     </div>
 
 
+
     <div class="rodape-links">
+
 
         <a href="index.html">
             Início
         </a>
 
+
         <a href="camisas.html">
             Camisas
         </a>
+
 
         <a href="bermudas.html">
             Bermudas & Shorts
         </a>
 
+
         <a href="ofertas.html">
             Ofertas
         </a>
 
+
     </div>
+
 
 
     <a
@@ -349,14 +605,18 @@
     </a>
 
 
+
     <p>
         © 2026 ZYNLO Multimarcas
     </p>
 
+
 </footer>
+
 
 
 <script src="game.js"></script>
 
 </body>
+
 </html>
