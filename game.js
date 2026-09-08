@@ -11,11 +11,18 @@
 const NUMERO_WHATSAPP = "5582994335034";
 
 
-function comprarProduto(nome, preco) {
+function comprarProduto(nome, preco, tamanho = "") {
 
-    const mensagem =
-        `Olá! Tenho interesse no produto: ${nome}. ` +
-        `Preço: R$ ${preco}.`;
+    let mensagem =
+        `Olá! Tenho interesse no produto: ${nome}.`;
+
+    if (tamanho) {
+        mensagem +=
+            ` Tamanho: ${tamanho}.`;
+    }
+
+    mensagem +=
+        ` Preço: R$ ${preco}.`;
 
     const url =
         `https://wa.me/${NUMERO_WHATSAPP}?text=` +
@@ -23,6 +30,7 @@ function comprarProduto(nome, preco) {
 
     window.open(url, "_blank");
 }
+
 
 
 /* =====================================
@@ -34,17 +42,29 @@ function selecionarTamanho(botao, produto) {
     const card =
         botao.closest(".produto-card");
 
+    if (!card) {
+        return;
+    }
+
+
     const botoes =
-        card.querySelectorAll(".tamanhos button");
+        card.querySelectorAll(
+            ".tamanhos button:not(.tamanho-indisponivel)"
+        );
+
 
     botoes.forEach(function(item) {
 
-        item.classList.remove("selecionado");
+        item.classList.remove(
+            "selecionado"
+        );
 
     });
 
 
-    botao.classList.add("selecionado");
+    botao.classList.add(
+        "selecionado"
+    );
 
 
     const tamanho =
@@ -52,7 +72,9 @@ function selecionarTamanho(botao, produto) {
 
 
     const texto =
-        card.querySelector(".tamanho-escolhido");
+        card.querySelector(
+            ".tamanho-escolhido"
+        );
 
 
     if (texto) {
@@ -63,8 +85,25 @@ function selecionarTamanho(botao, produto) {
     }
 
 
-    card.dataset.tamanho = tamanho;
+    card.dataset.tamanho =
+        tamanho;
+
 }
+
+
+
+/* =====================================
+   TAMANHO INDISPONÍVEL
+===================================== */
+
+function tamanhoIndisponivel(botao) {
+
+    alert(
+        "Esse tamanho está indisponível no momento."
+    );
+
+}
+
 
 
 /* =====================================
@@ -73,9 +112,16 @@ function selecionarTamanho(botao, produto) {
 
 let carrinho =
     JSON.parse(
-        localStorage.getItem("zynloCarrinho")
+        localStorage.getItem(
+            "zynloCarrinho"
+        )
     ) || [];
 
+
+
+/* =====================================
+   SALVAR CARRINHO
+===================================== */
 
 function salvarCarrinho() {
 
@@ -87,16 +133,137 @@ function salvarCarrinho() {
 }
 
 
+
+/* =====================================
+   ADICIONAR AO CARRINHO
+===================================== */
+
 function adicionarCarrinho(
     nome,
     preco,
-    imagem
+    imagem,
+    tamanho = ""
 ) {
 
-    const produtoExistente =
-        carrinho.find(
-            item => item.nome === nome
+    const card =
+        document.querySelector(
+            `.produto-card`
         );
+
+
+    /*
+       Se o produto possui tamanho,
+       exige que o cliente escolha.
+    */
+
+    let tamanhoFinal =
+        tamanho;
+
+
+    if (!tamanhoFinal) {
+
+        const cards =
+            document.querySelectorAll(
+                ".produto-card"
+            );
+
+
+        cards.forEach(function(item) {
+
+            const titulo =
+                item.querySelector(
+                    "h3"
+                );
+
+
+            if (
+                titulo &&
+                titulo.textContent.trim() === nome
+            ) {
+
+                if (
+                    item.dataset.tamanho
+                ) {
+
+                    tamanhoFinal =
+                        item.dataset.tamanho;
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /*
+       Para produtos que possuem
+       tamanho disponível, exigir seleção.
+    */
+
+    if (!tamanhoFinal) {
+
+        const cards =
+            document.querySelectorAll(
+                ".produto-card"
+            );
+
+
+        let produtoEncontrado =
+            false;
+
+
+        cards.forEach(function(item) {
+
+            const titulo =
+                item.querySelector(
+                    "h3"
+                );
+
+
+            if (
+                titulo &&
+                titulo.textContent.trim() === nome
+            ) {
+
+                produtoEncontrado =
+                    true;
+
+            }
+
+        });
+
+
+        if (produtoEncontrado) {
+
+            alert(
+                "Selecione um tamanho antes de adicionar ao carrinho."
+            );
+
+            return;
+
+        }
+
+    }
+
+
+
+    /*
+       Permite o mesmo produto
+       em tamanhos diferentes.
+    */
+
+    const produtoExistente =
+        carrinho.find(function(item) {
+
+            return (
+                item.nome === nome &&
+                item.tamanho === tamanhoFinal
+            );
+
+        });
+
 
 
     if (produtoExistente) {
@@ -107,13 +274,20 @@ function adicionarCarrinho(
 
         carrinho.push({
 
-            nome: nome,
+            nome:
+                nome,
 
-            preco: preco,
+            preco:
+                Number(preco),
 
-            imagem: imagem,
+            imagem:
+                imagem,
 
-            quantidade: 1
+            tamanho:
+                tamanhoFinal,
+
+            quantidade:
+                1
 
         });
 
@@ -129,9 +303,18 @@ function adicionarCarrinho(
 }
 
 
+
+/* =====================================
+   REMOVER ITEM DO CARRINHO
+===================================== */
+
 function removerCarrinho(index) {
 
-    carrinho.splice(index, 1);
+    carrinho.splice(
+        index,
+        1
+    );
+
 
     salvarCarrinho();
 
@@ -139,6 +322,11 @@ function removerCarrinho(index) {
 
 }
 
+
+
+/* =====================================
+   ATUALIZAR CARRINHO
+===================================== */
 
 function atualizarCarrinho() {
 
@@ -165,9 +353,14 @@ function atualizarCarrinho() {
     }
 
 
+
+    /* CONTADOR */
+
     if (contador) {
 
-        let quantidadeTotal = 0;
+        let quantidadeTotal =
+            0;
+
 
         carrinho.forEach(function(item) {
 
@@ -182,6 +375,9 @@ function atualizarCarrinho() {
 
     }
 
+
+
+    /* CARRINHO VAZIO */
 
     if (carrinho.length === 0) {
 
@@ -204,67 +400,106 @@ function atualizarCarrinho() {
     }
 
 
-    let total = 0;
+
+    let total =
+        0;
 
 
-    lista.innerHTML = "";
+    lista.innerHTML =
+        "";
 
 
-    carrinho.forEach(function(item, index) {
 
-        total +=
-            item.preco *
-            item.quantidade;
+    carrinho.forEach(
+        function(item, index) {
 
-
-        const div =
-            document.createElement("div");
+            total +=
+                item.preco *
+                item.quantidade;
 
 
-        div.className =
-            "item-carrinho";
+
+            const div =
+                document.createElement(
+                    "div"
+                );
 
 
-        div.innerHTML = `
-
-            <img
-                src="${item.imagem}"
-                alt="${item.nome}"
-            >
-
-            <div class="item-carrinho-info">
-
-                <h4>
-                    ${item.nome}
-                </h4>
-
-                <p>
-                    R$ ${item.preco
-                        .toFixed(2)
-                        .replace(".", ",")}
-                </p>
-
-                <p>
-                    Quantidade:
-                    ${item.quantidade}
-                </p>
-
-            </div>
-
-            <button
-                class="remover-item"
-                onclick="removerCarrinho(${index})">
-
-                ✕
-
-            </button>
-
-        `;
+            div.className =
+                "item-carrinho";
 
 
-        lista.appendChild(div);
 
-    });
+            const precoFormatado =
+                item.preco
+                    .toFixed(2)
+                    .replace(
+                        ".",
+                        ","
+                    );
+
+
+
+            div.innerHTML = `
+
+                <img
+                    src="${item.imagem}"
+                    alt="${item.nome}"
+                >
+
+
+                <div class="item-carrinho-info">
+
+                    <h4>
+                        ${item.nome}
+                    </h4>
+
+
+                    <p>
+                        R$ ${precoFormatado}
+                    </p>
+
+
+                    ${
+                        item.tamanho
+                        ?
+                        `
+                        <p>
+                            Tamanho:
+                            ${item.tamanho}
+                        </p>
+                        `
+                        :
+                        ""
+                    }
+
+
+                    <p>
+                        Quantidade:
+                        ${item.quantidade}
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="remover-item"
+                    onclick="removerCarrinho(${index})">
+
+                    ✕
+
+                </button>
+
+            `;
+
+
+            lista.appendChild(
+                div
+            );
+
+        }
+    );
+
 
 
     if (totalElemento) {
@@ -272,11 +507,15 @@ function atualizarCarrinho() {
         totalElemento.textContent =
             `R$ ${total
                 .toFixed(2)
-                .replace(".", ",")}`;
+                .replace(
+                    ".",
+                    ","
+                )}`;
 
     }
 
 }
+
 
 
 /* =====================================
@@ -320,6 +559,7 @@ function abrirCarrinho() {
 }
 
 
+
 /* =====================================
    FECHAR CARRINHO
 ===================================== */
@@ -358,13 +598,16 @@ function fecharCarrinho() {
 }
 
 
+
 /* =====================================
    FINALIZAR PEDIDO
 ===================================== */
 
 function finalizarCarrinho() {
 
-    if (carrinho.length === 0) {
+    if (
+        carrinho.length === 0
+    ) {
 
         alert(
             "Seu carrinho está vazio."
@@ -375,62 +618,84 @@ function finalizarCarrinho() {
     }
 
 
+
     let mensagem =
-        "Olá! Quero fazer um pedido na ZYNLO Multimarcas.%0A%0A";
+        "Olá! Quero fazer um pedido na ZYNLO Multimarcas.\n\n";
 
 
-    let total = 0;
+    let total =
+        0;
 
 
-    carrinho.forEach(function(item) {
 
-        const subtotal =
-            item.preco *
-            item.quantidade;
+    carrinho.forEach(
+        function(item) {
 
-
-        total += subtotal;
-
-
-        mensagem +=
-            `Produto: ${item.nome}%0A`;
+            const subtotal =
+                item.preco *
+                item.quantidade;
 
 
-        mensagem +=
-            `Quantidade: ${item.quantidade}%0A`;
+            total +=
+                subtotal;
 
 
-        mensagem +=
-            `Preço: R$ ${item.preco
-                .toFixed(2)
-                .replace(".", ",")}%0A%0A`;
 
-    });
+            mensagem +=
+                `Produto: ${item.nome}\n`;
+
+
+            if (item.tamanho) {
+
+                mensagem +=
+                    `Tamanho: ${item.tamanho}\n`;
+
+            }
+
+
+            mensagem +=
+                `Quantidade: ${item.quantidade}\n`;
+
+
+            mensagem +=
+                `Preço: R$ ${item.preco
+                    .toFixed(2)
+                    .replace(
+                        ".",
+                        ","
+                    )}\n\n`;
+
+        }
+    );
+
 
 
     mensagem +=
         `Total: R$ ${total
             .toFixed(2)
-            .replace(".", ",")}`;
+            .replace(
+                ".",
+                ","
+            )}`;
+
 
 
     const url =
-        `https://wa.me/${NUMERO_WHATSAPP}?text=${mensagem}`;
+        `https://wa.me/${NUMERO_WHATSAPP}?text=` +
+        encodeURIComponent(
+            mensagem
+        );
 
 
-    window.open(url, "_blank");
+    window.open(
+        url,
+        "_blank"
+    );
 
 }
 
-/* =====================================
-   TAMANHO INDISPONÍVEL
-===================================== */
 
-function tamanhoIndisponivel(botao) {
 
-    alert("Esse tamanho está indisponível no momento.");
-
-           }
 /* =====================================
    INICIAR
 ===================================== */
