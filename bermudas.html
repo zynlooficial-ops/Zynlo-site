@@ -40,8 +40,12 @@
             Camisas
         </a>
 
-        <a href="bermudas.html" class="ativo">
+        <a
+            href="bermudas.html"
+            class="ativo">
+
             Bermudas & Shorts
+
         </a>
 
         <a href="ofertas.html">
@@ -66,7 +70,11 @@
 </header>
 
 
+
 <main>
+
+
+    <!-- TOPO DA PÁGINA -->
 
     <section class="pagina-topo">
 
@@ -79,28 +87,335 @@
         </h1>
 
         <p>
-            Em breve novos produtos.
+            Shorts selecionados para completar seu estilo.
         </p>
 
     </section>
 
 
+
+    <!-- PRODUTOS -->
+
     <section class="secao">
 
-        <div class="sem-produtos">
 
-            <div>
-                🩳
-            </div>
+        <div class="produtos-grid">
 
-            <h2>
-                Novidades chegando
-            </h2>
 
-            <p>
-                Ainda não temos bermudas ou shorts cadastrados.
-                Assim que você tiver os produtos, vamos colocar aqui.
-            </p>
+
+            <!-- SHORT PRETO -->
+
+            <article class="produto-card">
+
+
+                <div class="produto-foto">
+
+                    <img
+                        src="short-preto.jpg"
+                        alt="Short Preto">
+
+                </div>
+
+
+
+                <div class="produto-info">
+
+
+                    <span class="produto-categoria">
+                        SHORT
+                    </span>
+
+
+                    <h3>
+                        Short Preto
+                    </h3>
+
+
+                    <strong class="produto-preco">
+                        R$ 89,90
+                    </strong>
+
+
+
+                    <div class="tamanhos">
+
+                        <span>
+                            Tamanho:
+                        </span>
+
+
+                        <button
+                            onclick="selecionarTamanho(
+                                this,
+                                'Short Preto'
+                            )">
+
+                            38
+
+                        </button>
+
+                    </div>
+
+
+
+                    <p class="tamanho-escolhido">
+
+                        Nenhum tamanho selecionado
+
+                    </p>
+
+
+
+                    <span class="disponivel">
+
+                        ● Disponível
+
+                    </span>
+
+
+
+                    <button
+                        class="botao-comprar"
+                        onclick="comprarProduto(
+                            'Short Preto',
+                            '89,90',
+                            '38'
+                        )">
+
+                        Comprar pelo WhatsApp
+
+                    </button>
+
+
+
+                    <button
+                        class="botao-carrinho-produto"
+                        onclick="adicionarCarrinho(
+                            'Short Preto',
+                            89.90,
+                            'short-preto.jpg',
+                            '38'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SHORT JEANS ESCURO -->
+
+            <article class="produto-card">
+
+
+                <div class="produto-foto">
+
+                    <img
+                        src="short-jeans-escuro.jpg"
+                        alt="Short Jeans Escuro">
+
+                </div>
+
+
+
+                <div class="produto-info">
+
+
+                    <span class="produto-categoria">
+                        SHORT
+                    </span>
+
+
+                    <h3>
+                        Short Jeans Escuro
+                    </h3>
+
+
+                    <strong class="produto-preco">
+                        R$ 89,90
+                    </strong>
+
+
+
+                    <div class="tamanhos">
+
+                        <span>
+                            Tamanho:
+                        </span>
+
+
+                        <button
+                            onclick="selecionarTamanho(
+                                this,
+                                'Short Jeans Escuro'
+                            )">
+
+                            38
+
+                        </button>
+
+                    </div>
+
+
+
+                    <p class="tamanho-escolhido">
+
+                        Nenhum tamanho selecionado
+
+                    </p>
+
+
+
+                    <span class="disponivel">
+
+                        ● Disponível
+
+                    </span>
+
+
+
+                    <button
+                        class="botao-comprar"
+                        onclick="comprarProduto(
+                            'Short Jeans Escuro',
+                            '89,90',
+                            '38'
+                        )">
+
+                        Comprar pelo WhatsApp
+
+                    </button>
+
+
+
+                    <button
+                        class="botao-carrinho-produto"
+                        onclick="adicionarCarrinho(
+                            'Short Jeans Escuro',
+                            89.90,
+                            'short-jeans-escuro.jpg',
+                            '38'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SHORT JEANS CLARO -->
+
+            <article class="produto-card">
+
+
+                <div class="produto-foto">
+
+                    <img
+                        src="short-jeans-claro.jpg"
+                        alt="Short Jeans Claro">
+
+                </div>
+
+
+
+                <div class="produto-info">
+
+
+                    <span class="produto-categoria">
+                        SHORT
+                    </span>
+
+
+                    <h3>
+                        Short Jeans Claro
+                    </h3>
+
+
+                    <strong class="produto-preco">
+                        R$ 89,90
+                    </strong>
+
+
+
+                    <div class="tamanhos">
+
+                        <span>
+                            Tamanho:
+                        </span>
+
+
+                        <button
+                            onclick="selecionarTamanho(
+                                this,
+                                'Short Jeans Claro'
+                            )">
+
+                            38
+
+                        </button>
+
+                    </div>
+
+
+
+                    <p class="tamanho-escolhido">
+
+                        Nenhum tamanho selecionado
+
+                    </p>
+
+
+
+                    <span class="disponivel">
+
+                        ● Disponível
+
+                    </span>
+
+
+
+                    <button
+                        class="botao-comprar"
+                        onclick="comprarProduto(
+                            'Short Jeans Claro',
+                            '89,90',
+                            '38'
+                        )">
+
+                        Comprar pelo WhatsApp
+
+                    </button>
+
+
+
+                    <button
+                        class="botao-carrinho-produto"
+                        onclick="adicionarCarrinho(
+                            'Short Jeans Claro',
+                            89.90,
+                            'short-jeans-claro.jpg',
+                            '38'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+
+                </div>
+
+            </article>
+
 
         </div>
 
@@ -109,6 +424,9 @@
 </main>
 
 
+
+<!-- FUNDO DO CARRINHO -->
+
 <div
     id="fundoCarrinho"
     class="fundo-carrinho"
@@ -116,7 +434,13 @@
 </div>
 
 
-<aside id="carrinho" class="carrinho">
+
+<!-- CARRINHO -->
+
+<aside
+    id="carrinho"
+    class="carrinho">
+
 
     <div class="carrinho-topo">
 
@@ -124,23 +448,34 @@
             Seu carrinho
         </h2>
 
-        <button onclick="fecharCarrinho()">
+
+        <button
+            onclick="fecharCarrinho()">
+
             ✕
+
         </button>
 
     </div>
 
 
-    <div id="listaCarrinho" class="lista-carrinho">
+
+    <div
+        id="listaCarrinho"
+        class="lista-carrinho">
 
         <p class="carrinho-vazio">
+
             Seu carrinho está vazio.
+
         </p>
 
     </div>
 
 
+
     <div class="carrinho-final">
+
 
         <strong>
 
@@ -153,6 +488,7 @@
         </strong>
 
 
+
         <button
             class="botao-comprar"
             onclick="finalizarCarrinho()">
@@ -161,41 +497,60 @@
 
         </button>
 
+
     </div>
 
 </aside>
 
 
+
+<!-- RODAPÉ -->
+
 <footer class="rodape">
+
 
     <div class="logo">
 
-        <strong>ZYNLO</strong>
+        <strong>
+            ZYNLO
+        </strong>
 
-        <span>multimarcas</span>
+        <span>
+            multimarcas
+        </span>
 
     </div>
 
 
+
     <div class="rodape-links">
+
 
         <a href="index.html">
             Início
         </a>
 
+
         <a href="camisas.html">
             Camisas
         </a>
 
-        <a href="bermudas.html">
+
+        <a
+            href="bermudas.html">
+
             Bermudas & Shorts
+
         </a>
+
 
         <a href="ofertas.html">
             Ofertas
         </a>
 
+
     </div>
+
 
 
     <a
@@ -208,15 +563,18 @@
     </a>
 
 
+
     <p>
         © 2026 ZYNLO Multimarcas
     </p>
 
+
 </footer>
+
 
 
 <script src="game.js"></script>
 
 </body>
 
-</html>
+    </html>
