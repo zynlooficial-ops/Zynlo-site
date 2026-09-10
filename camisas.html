@@ -1,343 +1,406 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Camisas | ZYNLO Multimarcas</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
+    <!-- =========================
+         TOPO
+    ========================== -->
 
-<header class="topo">
+    <header class="topo">
 
-    <a href="index.html" class="logo">
-
-        <strong>ZYNLO</strong>
-
-        <span>multimarcas</span>
-
-    </a>
-
-
-    <nav class="menu">
-
-        <a href="index.html">
-            Início
+        <a href="index.html" class="logo">
+            <strong>ZYNLO</strong>
+            <span>multimarcas</span>
         </a>
 
-        <a href="camisas.html" class="ativo">
-            Camisas
-        </a>
+        <nav class="menu">
 
-        <a href="bermudas.html">
-            Bermudas & Shorts
-        </a>
+            <a href="index.html">
+                Início
+            </a>
 
-        <a href="ofertas.html">
-            Ofertas
-        </a>
+            <a href="camisas.html" class="ativo">
+                Camisas
+            </a>
 
-    </nav>
+            <a href="bermudas.html">
+                Bermudas & Shorts
+            </a>
 
+            <a href="ofertas.html">
+                Ofertas
+            </a>
 
-    <button
-        class="botao-carrinho"
-        onclick="abrirCarrinho()">
-
-        🛒
-
-        <span id="contadorCarrinho">
-            0
-        </span>
-
-    </button>
-
-</header>
-
-
-<main>
-
-    <section class="pagina-topo">
-
-        <span>
-            COLEÇÃO
-        </span>
-
-        <h1>
-            Camisas
-        </h1>
-
-        <p>
-            Encontre sua próxima camisa na ZYNLO.
-        </p>
-
-    </section>
-
-
-    <section class="secao">
-
-<div class="produtos-grid">
-
-    <!-- CAMISA NIKE MARROM -->
-    <article class="produto-card">
-
-        <div class="produto-foto">
-            <img
-                src="camisa-nike-marrom.png"
-                alt="Camisa Nike Marrom">
-        </div>
-
-        <div class="produto-info">
-
-            <span class="produto-categoria">
-                CAMISA
-            </span>
-
-            <h3>
-                Camisa Nike Marrom
-            </h3>
-
-            <strong class="produto-preco">
-                R$ 42,00
-            </strong>
-
-            <div class="tamanhos">
-                <span>
-                    Tamanho:
-                </span>
-
-                <button
-                    onclick="comprarProduto(
-                        'Camisa Nike Marrom',
-                        '42,00'
-                    )">
-                    Consultar
-                </button>
-            </div>
-
-            <p class="tamanho-escolhido">
-                Consulte o tamanho disponível pelo WhatsApp
-            </p>
-
-            <span class="disponivel">
-                ● Disponível
-            </span>
-
-            <button
-                class="botao-comprar"
-                onclick="comprarProduto(
-                    'Camisa Nike Marrom',
-                    '42,00'
-                )">
-
-                Comprar pelo WhatsApp
-
-            </button>
-
-            <button
-                class="botao-carrinho-produto"
-                onclick="adicionarCarrinho(
-                    'Camisa Nike Marrom',
-                    42.00,
-                    'camisa-nike-marrom.png'
-                )">
-
-                🛒 Adicionar ao carrinho
-
-            </button>
-
-        </div>
-
-    </article>
-
-
-    <!-- CAMISA NIKE DRI-FIT OFF-WHITE -->
-    <article class="produto-card">
-
-        <div class="produto-foto">
-            <img
-                src="camisa-nike-offwhite.png"
-                alt="Camisa Nike Dri-FIT Off-White">
-        </div>
-
-        <div class="produto-info">
-
-            <span class="produto-categoria">
-                CAMISA
-            </span>
-
-            <h3>
-                Camisa Nike Dri-FIT Off-White
-            </h3>
-
-            <strong class="produto-preco">
-                R$ 42,00
-            </strong>
-
-            <div class="tamanhos">
-                <span>
-                    Tamanho:
-                </span>
-
-                <button
-                    onclick="comprarProduto(
-                        'Camisa Nike Dri-FIT Off-White',
-                        '42,00'
-                    )">
-                    Consultar
-                </button>
-            </div>
-
-            <p class="tamanho-escolhido">
-                Consulte o tamanho disponível pelo WhatsApp
-            </p>
-
-            <span class="disponivel">
-                ● Disponível
-            </span>
-
-            <button
-                class="botao-comprar"
-                onclick="comprarProduto(
-                    'Camisa Nike Dri-FIT Off-White',
-                    '42,00'
-                )">
-
-                Comprar pelo WhatsApp
-
-            </button>
-
-            <button
-                class="botao-carrinho-produto"
-                onclick="adicionarCarrinho(
-                    'Camisa Nike Dri-FIT Off-White',
-                    42.00,
-                    'camisa-nike-offwhite.png'
-                )">
-
-                🛒 Adicionar ao carrinho
-
-            </button>
-
-        </div>
-
-    </article>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<div id="fundoCarrinho" class="fundo-carrinho" onclick="fecharCarrinho()"></div>
-
-
-<aside id="carrinho" class="carrinho">
-
-    <div class="carrinho-topo">
-
-        <h2>
-            Seu carrinho
-        </h2>
-
-        <button onclick="fecharCarrinho()">
-            ✕
-        </button>
-
-    </div>
-
-
-    <div id="listaCarrinho" class="lista-carrinho">
-
-        <p class="carrinho-vazio">
-            Seu carrinho está vazio.
-        </p>
-
-    </div>
-
-
-    <div class="carrinho-final">
-
-        <strong>
-            Total:
-            <span id="totalCarrinho">
-                R$ 0,00
-            </span>
-        </strong>
+        </nav>
 
         <button
-            class="botao-comprar"
-            onclick="finalizarCarrinho()">
+            class="botao-carrinho"
+            onclick="abrirCarrinho()">
 
-            Comprar pelo WhatsApp
+            🛒
+            <span id="contadorCarrinho">0</span>
 
         </button>
 
+    </header>
+
+
+    <!-- =========================
+         CONTEÚDO
+    ========================== -->
+
+    <main>
+
+        <section class="pagina-topo">
+
+            <span>COLEÇÃO</span>
+
+            <h1>
+                Camisas
+            </h1>
+
+            <p>
+                Confira as camisas disponíveis na ZYNLO.
+            </p>
+
+        </section>
+
+
+        <section class="secao">
+
+            <div class="produtos-grid">
+
+
+                <!-- =========================
+                     CAMISA NIKE MARROM
+                ========================== -->
+
+                <article class="produto-card">
+
+                    <div class="produto-foto">
+
+                        <img
+                            src="camisa-nike-marrom.png"
+                            alt="Camisa Nike Marrom">
+
+                    </div>
+
+
+                    <div class="produto-info">
+
+                        <span class="produto-categoria">
+                            CAMISA
+                        </span>
+
+                        <h3>
+                            Camisa Nike Marrom
+                        </h3>
+
+                        <strong class="produto-preco">
+                            R$ 42,00
+                        </strong>
+
+
+                        <div class="tamanhos">
+
+                            <span>
+                                Tamanho:
+                            </span>
+
+                            <button
+                                onclick="comprarProduto(
+                                    'Camisa Nike Marrom',
+                                    '42,00'
+                                )">
+
+                                Consultar
+
+                            </button>
+
+                        </div>
+
+
+                        <p class="tamanho-escolhido">
+
+                            Consulte o tamanho disponível pelo WhatsApp
+
+                        </p>
+
+
+                        <span class="disponivel">
+
+                            ● Disponível
+
+                        </span>
+
+
+                        <button
+                            class="botao-comprar"
+                            onclick="comprarProduto(
+                                'Camisa Nike Marrom',
+                                '42,00'
+                            )">
+
+                            Comprar pelo WhatsApp
+
+                        </button>
+
+
+                        <button
+                            class="botao-carrinho-produto"
+                            onclick="adicionarCarrinho(
+                                'Camisa Nike Marrom',
+                                42.00,
+                                'camisa-nike-marrom.png'
+                            )">
+
+                            🛒 Adicionar ao carrinho
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     CAMISA NIKE DRI-FIT OFF-WHITE
+                ========================== -->
+
+                <article class="produto-card">
+
+                    <div class="produto-foto">
+
+                        <img
+                            src="camisa-nike-offwhite.png"
+                            alt="Camisa Nike Dri-FIT Off-White">
+
+                    </div>
+
+
+                    <div class="produto-info">
+
+                        <span class="produto-categoria">
+                            CAMISA
+                        </span>
+
+                        <h3>
+                            Camisa Nike Dri-FIT Off-White
+                        </h3>
+
+                        <strong class="produto-preco">
+                            R$ 42,00
+                        </strong>
+
+
+                        <div class="tamanhos">
+
+                            <span>
+                                Tamanho:
+                            </span>
+
+                            <button
+                                onclick="comprarProduto(
+                                    'Camisa Nike Dri-FIT Off-White',
+                                    '42,00'
+                                )">
+
+                                Consultar
+
+                            </button>
+
+                        </div>
+
+
+                        <p class="tamanho-escolhido">
+
+                            Consulte o tamanho disponível pelo WhatsApp
+
+                        </p>
+
+
+                        <span class="disponivel">
+
+                            ● Disponível
+
+                        </span>
+
+
+                        <button
+                            class="botao-comprar"
+                            onclick="comprarProduto(
+                                'Camisa Nike Dri-FIT Off-White',
+                                '42,00'
+                            )">
+
+                            Comprar pelo WhatsApp
+
+                        </button>
+
+
+                        <button
+                            class="botao-carrinho-produto"
+                            onclick="adicionarCarrinho(
+                                'Camisa Nike Dri-FIT Off-White',
+                                42.00,
+                                'camisa-nike-offwhite.png'
+                            )">
+
+                            🛒 Adicionar ao carrinho
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FUNDO DO CARRINHO
+    ========================== -->
+
+    <div
+        id="fundoCarrinho"
+        class="fundo-carrinho"
+        onclick="fecharCarrinho()">
     </div>
 
-</aside>
+
+    <!-- =========================
+         CARRINHO
+    ========================== -->
+
+    <aside
+        id="carrinho"
+        class="carrinho">
+
+        <div class="carrinho-topo">
+
+            <h2>
+                Seu carrinho
+            </h2>
+
+            <button onclick="fecharCarrinho()">
+                ✕
+            </button>
+
+        </div>
 
 
-<footer class="rodape">
+        <div
+            id="listaCarrinho"
+            class="lista-carrinho">
 
-    <div class="logo">
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
 
-        <strong>ZYNLO</strong>
-
-        <span>multimarcas</span>
-
-    </div>
+        </div>
 
 
-    <div class="rodape-links">
+        <div class="carrinho-final">
 
-        <a href="index.html">
-            Início
+            <strong>
+
+                Total:
+
+                <span id="totalCarrinho">
+                    R$ 0,00
+                </span>
+
+            </strong>
+
+
+            <button
+                class="botao-comprar"
+                onclick="finalizarCarrinho()">
+
+                Comprar pelo WhatsApp
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="rodape">
+
+        <div class="logo">
+
+            <strong>
+                ZYNLO
+            </strong>
+
+            <span>
+                multimarcas
+            </span>
+
+        </div>
+
+
+        <div class="rodape-links">
+
+            <a href="index.html">
+                Início
+            </a>
+
+            <a href="camisas.html">
+                Camisas
+            </a>
+
+            <a href="bermudas.html">
+                Bermudas & Shorts
+            </a>
+
+            <a href="ofertas.html">
+                Ofertas
+            </a>
+
+        </div>
+
+
+        <a
+            class="whatsapp-rodape"
+            href="https://wa.me/5582994335034"
+            target="_blank">
+
+            WhatsApp
+
         </a>
 
-        <a href="camisas.html">
-            Camisas
-        </a>
 
-        <a href="bermudas.html">
-            Bermudas & Shorts
-        </a>
+        <p>
+            © 2026 ZYNLO Multimarcas
+        </p>
 
-        <a href="ofertas.html">
-            Ofertas
-        </a>
-
-    </div>
+    </footer>
 
 
-    <a
-        class="whatsapp-rodape"
-        href="https://wa.me/5582994335034"
-        target="_blank">
-
-        WhatsApp
-
-    </a>
-
-
-    <p>
-        © 2026 ZYNLO Multimarcas
-    </p>
-
-</footer>
-
-
-<script src="game.js"></script>
+    <script src="game.js"></script>
 
 </body>
-</html>
+
+    </html>
