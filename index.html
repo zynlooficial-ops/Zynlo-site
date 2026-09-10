@@ -1,6 +1,6 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
     <meta charset="UTF-8">
@@ -9,907 +9,736 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>ZYNLO Multimarcas</title>
+    <title>
+        ZYNLO Multimarcas
+    </title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css">
 
 </head>
 
 <body>
 
 
-<header class="topo">
+    <!-- =========================
+         TOPO
+    ========================== -->
 
-    <a href="index.html" class="logo">
-
-        <strong>ZYNLO</strong>
-
-        <span>multimarcas</span>
-
-    </a>
+    <header class="topo">
 
 
-    <nav class="menu">
+        <a
+            href="index.html"
+            class="logo">
 
-        <a href="index.html">
-            Início
-        </a>
-
-        <a href="camisas.html">
-            Camisas
-        </a>
-
-        <a href="bermudas.html">
-            Bermudas & Shorts
-        </a>
-
-        <a href="ofertas.html">
-            Ofertas
-        </a>
-
-    </nav>
-
-
-    <button
-        class="botao-carrinho"
-        onclick="abrirCarrinho()">
-
-        🛒
-
-        <span id="contadorCarrinho">
-            0
-        </span>
-
-    </button>
-
-</header>
-
-
-<main>
-
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-        <div class="hero-conteudo">
-
-            <span class="mini-titulo">
-                ZYNLO MULTIMARCAS
-            </span>
-
-            <h1>
-                Seu estilo.<br>
-                Sua identidade.
-            </h1>
-
-            <p>
-                Moda masculina selecionada para você.
-            </p>
-
-            <a
-                href="#produtos"
-                class="botao-principal">
-
-                VER PRODUTOS
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- CATEGORIAS -->
-
-    <section class="secao">
-
-        <div class="titulo-secao">
+            <strong>
+                ZYNLO
+            </strong>
 
             <span>
-                EXPLORE
+                multimarcas
             </span>
 
-            <h2>
-                Encontre seu estilo
-            </h2>
-
-        </div>
+        </a>
 
 
-        <div class="categorias">
 
+        <nav class="menu">
 
-            <!-- CAMISAS -->
 
             <a
-                href="camisas.html"
-                class="categoria-card">
+                href="index.html"
+                class="ativo">
 
-                <div class="icone">
-                    👕
-                </div>
-
-                <h3>
-                    Camisas
-                </h3>
-
-                <p>
-                    Ver coleção →
-                </p>
+                Início
 
             </a>
 
 
-
-            <!-- BERMUDAS -->
-
-            <a
-                href="bermudas.html"
-                class="categoria-card">
-
-                <div class="icone">
-                    🩳
-                </div>
-
-                <h3>
-                    Bermudas & Shorts
-                </h3>
-
-                <p>
-                    Ver coleção →
-                </p>
-
+            <a href="camisas.html">
+                Camisas
             </a>
 
 
-
-            <!-- OFERTAS -->
-
-            <a
-                href="ofertas.html"
-                class="categoria-card oferta-card">
-
-                <div class="icone">
-                    🔥
-                </div>
-
-                <h3>
-                    Ofertas
-                </h3>
-
-                <p>
-                    Ver ofertas →
-                </p>
-
+            <a href="bermudas.html">
+                Bermudas & Shorts
             </a>
 
 
-        </div>
+            <a href="ofertas.html">
+                Ofertas
+            </a>
 
-    </section>
 
+        </nav>
 
-
-    <!-- PRODUTOS EM DESTAQUE -->
-
-    <section
-    class="secao produtos-secao"
-    id="produtos">
-
-    <div class="titulo-secao">
-
-        <span>
-            DESTAQUES
-        </span>
-
-        <h2>
-            Produtos em destaque
-        </h2>
-
-    </div>
-
-
-    <div class="produtos-grid">
-
-
-        <!-- CAMISA -->
-
-        <article class="produto-card">
-
-            <div class="produto-foto">
-
-                <!-- TROQUE camisa.jpg PELA FOTO CORRETA -->
-                <img
-                    src="camisa.jpg"
-                    alt="Camisa">
-
-            </div>
-
-
-            <div class="produto-info">
-
-                <span class="produto-categoria">
-                    CAMISA
-                </span>
-
-                <h3>
-                    Camisa
-                </h3>
-
-                <strong class="produto-preco">
-                    R$ 42,00
-                </strong>
-
-
-                <div class="tamanhos">
-
-                    <span>
-                        Tamanho:
-                    </span>
-
-                    <button
-                        onclick="selecionarTamanho(
-                            this,
-                            'Camisa'
-                        )">
-                        P
-                    </button>
-
-                    <button
-                        onclick="selecionarTamanho(
-                            this,
-                            'Camisa'
-                        )">
-                        M
-                    </button>
-
-                    <button
-                        onclick="selecionarTamanho(
-                            this,
-                            'Camisa'
-                        )">
-                        G
-                    </button>
-
-                    <button
-                        onclick="selecionarTamanho(
-                            this,
-                            'Camisa'
-                        )">
-                        GG
-                    </button>
-
-                </div>
-
-
-                <p class="tamanho-escolhido">
-                    Nenhum tamanho selecionado
-                </p>
-
-
-                <span class="disponivel">
-                    ● Disponível
-                </span>
-
-
-                <button
-                    class="botao-comprar"
-                    onclick="comprarProduto(
-                        'Camisa',
-                        '42,00'
-                    )">
-
-                    Comprar pelo WhatsApp
-
-                </button>
-
-
-                <button
-                    class="botao-carrinho-produto"
-                    onclick="adicionarCarrinho(
-                        'Camisa',
-                        42.00,
-                        'camisa.jpg'
-                    )">
-
-                    🛒 Adicionar ao carrinho
-
-                </button>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- SHORT JEANS CLARO -->
-
-        <article class="produto-card">
-
-            <div class="produto-foto">
-
-                <img
-                    class="foto-short-claro"
-                    src="short-jeans-claro.jpg"
-                    alt="Short Jeans Claro">
-
-            </div>
-
-
-            <div class="produto-info">
-
-                <span class="produto-categoria">
-                    SHORT
-                </span>
-
-                <h3>
-                    Short Jeans Claro
-                </h3>
-
-                <strong class="produto-preco">
-                    R$ 89,90
-                </strong>
-
-
-                <div class="tamanhos">
-
-                    <span>
-                        Tamanho:
-                    </span>
-
-                    <button
-                        onclick="selecionarTamanho(
-                            this,
-                            'Short Jeans Claro'
-                        )">
-
-                        38
-
-                    </button>
-
-                </div>
-
-
-                <p class="tamanho-escolhido">
-                    Nenhum tamanho selecionado
-                </p>
-
-
-                <span class="disponivel">
-                    ● Disponível
-                </span>
-
-
-                <button
-                    class="botao-comprar"
-                    onclick="comprarProduto(
-                        'Short Jeans Claro',
-                        '89,90',
-                        '38'
-                    )">
-
-                    Comprar pelo WhatsApp
-
-                </button>
-
-
-                <button
-                    class="botao-carrinho-produto"
-                    onclick="adicionarCarrinho(
-                        'Short Jeans Claro',
-                        89.90,
-                        'short-jeans-claro.jpg',
-                        '38'
-                    )">
-
-                    🛒 Adicionar ao carrinho
-
-                </button>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- SHORT PRETO -->
-
-        <article class="produto-card">
-
-            <div class="produto-foto">
-
-                <img
-                    src="short-preto.jpg"
-                    alt="Short Preto">
-
-            </div>
-
-
-            <div class="produto-info">
-
-                <span class="produto-categoria">
-                    SHORT
-                </span>
-
-                <h3>
-                    Short Preto
-                </h3>
-
-                <strong class="produto-preco">
-                    R$ 89,90
-                </strong>
-
-
-                <div class="tamanhos">
-
-                    <span>
-                        Tamanho:
-                    </span>
-
-                    <button
-                        onclick="selecionarTamanho(
-                            this,
-                            'Short Preto'
-                        )">
-
-                        38
-
-                    </button>
-
-                </div>
-
-
-                <p class="tamanho-escolhido">
-                    Nenhum tamanho selecionado
-                </p>
-
-
-                <span class="disponivel">
-                    ● Disponível
-                </span>
-
-
-                <button
-                    class="botao-comprar"
-                    onclick="comprarProduto(
-                        'Short Preto',
-                        '89,90',
-                        '38'
-                    )">
-
-                    Comprar pelo WhatsApp
-
-                </button>
-
-
-                <button
-                    class="botao-carrinho-produto"
-                    onclick="adicionarCarrinho(
-                        'Short Preto',
-                        89.90,
-                        'short-preto.jpg',
-                        '38'
-                    )">
-
-                    🛒 Adicionar ao carrinho
-
-                </button>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-    </section>
-
-
-
-        <div class="produtos-grid">
-
-
-            <!-- =========================
-                 CAMISA PUMA
-            ========================== -->
-
-            <article class="produto-card">
-
-
-                <div class="produto-foto">
-
-                    <img
-                        src="camisa-puma-azul.png"
-                        alt="Camisa Puma Azul">
-
-                </div>
-
-
-
-                <div class="produto-info">
-
-
-                    <span class="produto-categoria">
-                        CAMISA
-                    </span>
-
-
-                    <h3>
-                        Camisa Puma Azul
-                    </h3>
-
-
-                    <strong class="produto-preco">
-                        R$ 49,90
-                    </strong>
-
-
-
-                    <div class="tamanhos">
-
-                        <span>
-                            Tamanho:
-                        </span>
-
-
-                        <button
-                            onclick="tamanhoIndisponivel(this)"
-                            class="tamanho-indisponivel">
-
-                            P
-
-                        </button>
-
-
-                        <button
-                            onclick="tamanhoIndisponivel(this)"
-                            class="tamanho-indisponivel">
-
-                            M
-
-                        </button>
-
-
-                        <button
-                            onclick="selecionarTamanho(
-                                this,
-                                'Camisa Puma Azul'
-                            )">
-
-                            G
-
-                        </button>
-
-
-                        <button
-                            onclick="tamanhoIndisponivel(this)"
-                            class="tamanho-indisponivel">
-
-                            GG
-
-                        </button>
-
-                    </div>
-
-
-
-                    <p class="tamanho-escolhido">
-
-                        Nenhum tamanho selecionado
-
-                    </p>
-
-
-
-                    <span class="disponivel">
-
-                        ● Disponível
-
-                    </span>
-
-
-
-                    <button
-                        class="botao-comprar"
-                        onclick="comprarProduto(
-                            'Camisa Puma Azul',
-                            '49,90'
-                        )">
-
-                        Comprar pelo WhatsApp
-
-                    </button>
-
-
-
-                    <button
-                        class="botao-carrinho-produto"
-                        onclick="adicionarCarrinho(
-                            'Camisa Puma Azul',
-                            49.90,
-                            'camisa-puma-azul.png'
-                        )">
-
-                        🛒 Adicionar ao carrinho
-
-                    </button>
-
-
-                </div>
-
-            </article>
-
-
-
-            <!-- =========================
-                 SHORT JEANS CLARO
-            ========================== -->
-
-            <article class="produto-card">
-
-
-                <div class="produto-foto">
-
-                    <img class="foto-short-claro" src="short-jeans-claro.jpg" alt="Short Jeans Claro">
-
-                </div>
-
-
-
-                <div class="produto-info">
-
-
-                    <span class="produto-categoria">
-                        SHORT
-                    </span>
-
-
-                    <h3>
-                        Short Jeans Claro
-                    </h3>
-
-
-                    <strong class="produto-preco">
-                        R$ 89,90
-                    </strong>
-
-
-
-                    <div class="tamanhos">
-
-                        <span>
-                            Tamanho:
-                        </span>
-
-
-                        <button
-                            onclick="selecionarTamanho(
-                                this,
-                                'Short Jeans Claro'
-                            )">
-
-                            38
-
-                        </button>
-
-                    </div>
-
-
-
-                    <p class="tamanho-escolhido">
-
-                        Nenhum tamanho selecionado
-
-                    </p>
-
-
-
-                    <span class="disponivel">
-
-                        ● Disponível
-
-                    </span>
-
-
-
-                    <button
-                        class="botao-comprar"
-                        onclick="comprarProduto(
-                            'Short Jeans Claro',
-                            '89,90',
-                            '38'
-                        )">
-
-                        Comprar pelo WhatsApp
-
-                    </button>
-
-
-
-                    <button
-                        class="botao-carrinho-produto"
-                        onclick="adicionarCarrinho(
-                            'Short Jeans Claro',
-                            89.90,
-                            'short-jeans-claro.jpg',
-                            '38'
-                        )">
-
-                        🛒 Adicionar ao carrinho
-
-                    </button>
-
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-</main>
-
-
-
-<!-- =========================
-     FUNDO DO CARRINHO
-========================== -->
-
-<div
-    id="fundoCarrinho"
-    class="fundo-carrinho"
-    onclick="fecharCarrinho()">
-</div>
-
-
-
-<!-- =========================
-     CARRINHO
-========================== -->
-
-<aside
-    id="carrinho"
-    class="carrinho">
-
-
-    <div class="carrinho-topo">
-
-        <h2>
-            Seu carrinho
-        </h2>
 
 
         <button
-            onclick="fecharCarrinho()">
+            class="botao-carrinho"
+            onclick="abrirCarrinho()">
 
-            ✕
+            🛒
+
+            <span id="contadorCarrinho">
+                0
+            </span>
 
         </button>
 
-    </div>
+
+    </header>
 
 
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+
+        <section class="hero">
+
+
+            <div class="hero-conteudo">
+
+
+                <span>
+                    ZYNLO MULTIMARCAS
+                </span>
+
+
+                <h1>
+                    Seu estilo.<br>
+                    Sua identidade.
+                </h1>
+
+
+                <p>
+                    Peças selecionadas para quem gosta de
+                    vestir o próprio estilo.
+                </p>
+
+
+                <a
+                    href="camisas.html"
+                    class="botao-principal">
+
+                    Ver produtos
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             CATEGORIAS
+        ========================== -->
+
+        <section class="secao">
+
+
+            <div class="secao-topo">
+
+                <span>
+                    CATEGORIAS
+                </span>
+
+                <h2>
+                    Encontre seu estilo
+                </h2>
+
+            </div>
+
+
+
+            <div class="categorias-grid">
+
+
+                <a
+                    href="camisas.html"
+                    class="categoria-card">
+
+                    <h3>
+                        Camisas
+                    </h3>
+
+                    <p>
+                        Confira nossas camisas disponíveis.
+                    </p>
+
+                </a>
+
+
+
+                <a
+                    href="bermudas.html"
+                    class="categoria-card">
+
+                    <h3>
+                        Bermudas & Shorts
+                    </h3>
+
+                    <p>
+                        Shorts selecionados para seu estilo.
+                    </p>
+
+                </a>
+
+
+
+                <a
+                    href="ofertas.html"
+                    class="categoria-card">
+
+                    <h3>
+                        Ofertas
+                    </h3>
+
+                    <p>
+                        Produtos e oportunidades especiais.
+                    </p>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             PRODUTOS EM DESTAQUE
+        ========================== -->
+
+        <section class="secao produtos-secao">
+
+
+            <div class="secao-topo">
+
+
+                <span>
+                    DISPONÍVEIS
+                </span>
+
+
+                <h2>
+                    Produtos em destaque
+                </h2>
+
+
+            </div>
+
+
+
+            <div class="produtos-grid">
+
+
+                <!-- =========================
+                     CAMISA NIKE MARROM
+                ========================== -->
+
+                <article class="produto-card">
+
+
+                    <div class="produto-foto">
+
+                        <img
+                            src="camisa-nike-marrom.png"
+                            alt="Camisa Nike Marrom">
+
+                    </div>
+
+
+
+                    <div class="produto-info">
+
+
+                        <span class="produto-categoria">
+                            CAMISA
+                        </span>
+
+
+                        <h3>
+                            Camisa Nike Marrom
+                        </h3>
+
+
+                        <strong class="produto-preco">
+                            R$ 42,00
+                        </strong>
+
+
+
+                        <div class="tamanhos">
+
+
+                            <span>
+                                Tamanho:
+                            </span>
+
+
+                            <button
+                                onclick="comprarProduto(
+                                    'Camisa Nike Marrom',
+                                    '42,00'
+                                )">
+
+                                Consultar
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <p class="tamanho-escolhido">
+
+                            Consulte o tamanho disponível pelo WhatsApp
+
+                        </p>
+
+
+
+                        <span class="disponivel">
+
+                            ● Disponível
+
+                        </span>
+
+
+
+                        <button
+                            class="botao-comprar"
+                            onclick="comprarProduto(
+                                'Camisa Nike Marrom',
+                                '42,00'
+                            )">
+
+                            Comprar pelo WhatsApp
+
+                        </button>
+
+
+
+                        <button
+                            class="botao-carrinho-produto"
+                            onclick="adicionarCarrinho(
+                                'Camisa Nike Marrom',
+                                42.00,
+                                'camisa-nike-marrom.png'
+                            )">
+
+                            🛒 Adicionar ao carrinho
+
+                        </button>
+
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     SHORT PRETO
+                ========================== -->
+
+                <article class="produto-card">
+
+
+                    <div class="produto-foto">
+
+                        <img
+                            src="short-preto.jpg"
+                            alt="Short Preto">
+
+                    </div>
+
+
+
+                    <div class="produto-info">
+
+
+                        <span class="produto-categoria">
+                            SHORT
+                        </span>
+
+
+                        <h3>
+                            Short Preto
+                        </h3>
+
+
+                        <strong class="produto-preco">
+                            R$ 89,90
+                        </strong>
+
+
+
+                        <div class="tamanhos">
+
+
+                            <span>
+                                Tamanho:
+                            </span>
+
+
+                            <button
+                                onclick="selecionarTamanho(
+                                    this,
+                                    'Short Preto'
+                                )">
+
+                                38
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <p class="tamanho-escolhido">
+
+                            Nenhum tamanho selecionado
+
+                        </p>
+
+
+
+                        <span class="disponivel">
+
+                            ● Disponível
+
+                        </span>
+
+
+
+                        <button
+                            class="botao-comprar"
+                            onclick="comprarProduto(
+                                'Short Preto',
+                                '89,90',
+                                '38'
+                            )">
+
+                            Comprar pelo WhatsApp
+
+                        </button>
+
+
+
+                        <button
+                            class="botao-carrinho-produto"
+                            onclick="adicionarCarrinho(
+                                'Short Preto',
+                                89.90,
+                                'short-preto.jpg',
+                                '38'
+                            )">
+
+                            🛒 Adicionar ao carrinho
+
+                        </button>
+
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================
+                     CAMISA NIKE DRI-FIT OFF-WHITE
+                ========================== -->
+
+                <article class="produto-card">
+
+
+                    <div class="produto-foto">
+
+                        <img
+                            src="camisa-nike-offwhite.png"
+                            alt="Camisa Nike Dri-FIT Off-White">
+
+                    </div>
+
+
+
+                    <div class="produto-info">
+
+
+                        <span class="produto-categoria">
+                            CAMISA
+                        </span>
+
+
+                        <h3>
+                            Camisa Nike Dri-FIT Off-White
+                        </h3>
+
+
+                        <strong class="produto-preco">
+                            R$ 42,00
+                        </strong>
+
+
+
+                        <div class="tamanhos">
+
+
+                            <span>
+                                Tamanho:
+                            </span>
+
+
+                            <button
+                                onclick="comprarProduto(
+                                    'Camisa Nike Dri-FIT Off-White',
+                                    '42,00'
+                                )">
+
+                                Consultar
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <p class="tamanho-escolhido">
+
+                            Consulte o tamanho disponível pelo WhatsApp
+
+                        </p>
+
+
+
+                        <span class="disponivel">
+
+                            ● Disponível
+
+                        </span>
+
+
+
+                        <button
+                            class="botao-comprar"
+                            onclick="comprarProduto(
+                                'Camisa Nike Dri-FIT Off-White',
+                                '42,00'
+                            )">
+
+                            Comprar pelo WhatsApp
+
+                        </button>
+
+
+
+                        <button
+                            class="botao-carrinho-produto"
+                            onclick="adicionarCarrinho(
+                                'Camisa Nike Dri-FIT Off-White',
+                                42.00,
+                                'camisa-nike-offwhite.png'
+                            )">
+
+                            🛒 Adicionar ao carrinho
+
+                        </button>
+
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FUNDO DO CARRINHO
+    ========================== -->
 
     <div
-        id="listaCarrinho"
-        class="lista-carrinho">
-
-        <p class="carrinho-vazio">
-
-            Seu carrinho está vazio.
-
-        </p>
-
+        id="fundoCarrinho"
+        class="fundo-carrinho"
+        onclick="fecharCarrinho()">
     </div>
 
 
 
-    <div class="carrinho-final">
+    <!-- =========================
+         CARRINHO
+    ========================== -->
+
+    <aside
+        id="carrinho"
+        class="carrinho">
 
 
-        <strong>
+        <div class="carrinho-topo">
 
-            Total:
 
-            <span id="totalCarrinho">
+            <h2>
+                Seu carrinho
+            </h2>
 
-                R$ 0,00
 
+            <button
+                onclick="fecharCarrinho()">
+
+                ✕
+
+            </button>
+
+
+        </div>
+
+
+
+        <div
+            id="listaCarrinho"
+            class="lista-carrinho">
+
+
+            <p class="carrinho-vazio">
+
+                Seu carrinho está vazio.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="carrinho-final">
+
+
+            <strong>
+
+                Total:
+
+                <span id="totalCarrinho">
+
+                    R$ 0,00
+
+                </span>
+
+            </strong>
+
+
+
+            <button
+                class="botao-comprar"
+                onclick="finalizarCarrinho()">
+
+                Comprar pelo WhatsApp
+
+            </button>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="rodape">
+
+
+        <div class="logo">
+
+
+            <strong>
+                ZYNLO
+            </strong>
+
+
+            <span>
+                multimarcas
             </span>
 
-        </strong>
+
+        </div>
 
 
 
-        <button
-            class="botao-comprar"
-            onclick="finalizarCarrinho()">
-
-            Comprar pelo WhatsApp
-
-        </button>
+        <div class="rodape-links">
 
 
-    </div>
-
-</aside>
-
-
-
-<!-- =========================
-     RODAPÉ
-========================== -->
-
-<footer class="rodape">
+            <a href="index.html">
+                Início
+            </a>
 
 
-    <div class="logo">
+            <a href="camisas.html">
+                Camisas
+            </a>
 
-        <strong>
-            ZYNLO
-        </strong>
 
-        <span>
-            multimarcas
-        </span>
+            <a href="bermudas.html">
+                Bermudas & Shorts
+            </a>
 
-    </div>
+
+            <a href="ofertas.html">
+                Ofertas
+            </a>
+
+
+        </div>
 
 
 
-    <div class="rodape-links">
+        <a
+            class="whatsapp-rodape"
+            href="https://wa.me/5582994335034"
+            target="_blank">
 
+            WhatsApp
 
-        <a href="index.html">
-            Início
         </a>
 
 
-        <a href="camisas.html">
-            Camisas
-        </a>
+
+        <p>
+            © 2026 ZYNLO Multimarcas
+        </p>
 
 
-        <a href="bermudas.html">
-            Bermudas & Shorts
-        </a>
-
-
-        <a href="ofertas.html">
-            Ofertas
-        </a>
-
-
-    </div>
+    </footer>
 
 
 
-    <a
-        class="whatsapp-rodape"
-        href="https://wa.me/5582994335034"
-        target="_blank">
-
-        WhatsApp
-
-    </a>
-
-
-
-    <p>
-        © 2026 ZYNLO Multimarcas
-    </p>
-
-
-</footer>
-
-
-
-<script src="game.js"></script>
+    <script src="game.js"></script>
 
 </body>
 
-</html>
+            </html>
