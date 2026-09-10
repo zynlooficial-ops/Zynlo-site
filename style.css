@@ -290,7 +290,7 @@ button {
 .produto-foto {
     width: 100%;
     height: 270px;
-    background: #e00020
+    background: #e00020;
     border-radius: 16px 16px 0 0;
     overflow: hidden;
     display: flex;
@@ -304,16 +304,7 @@ button {
     object-position: center;
     display: block;
 }
-}
 
-
-.produto-foto img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-}
 
 
 .produto-card:hover .produto-foto img {
