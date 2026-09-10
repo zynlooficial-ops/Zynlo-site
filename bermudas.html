@@ -22,368 +22,323 @@
 <body>
 
 
-    <!-- =========================
-         TOPO
-    ========================== -->
+<header class="topo">
 
-    <header class="topo">
+
+    <a
+        href="index.html"
+        class="logo">
+
+        <strong>
+            ZYNLO
+        </strong>
+
+        <span>
+            multimarcas
+        </span>
+
+    </a>
+
+
+    <nav class="menu">
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="camisas.html">
+            Camisas
+        </a>
 
         <a
-            href="index.html"
-            class="logo">
+            href="bermudas.html"
+            class="ativo">
 
-            <strong>
-                ZYNLO
-            </strong>
-
-            <span>
-                multimarcas
-            </span>
+            Bermudas & Shorts
 
         </a>
 
+        <a href="ofertas.html">
+            Ofertas
+        </a>
 
-        <nav class="menu">
+    </nav>
 
-            <a href="index.html">
-                Início
-            </a>
 
-            <a href="camisas.html">
-                Camisas
-            </a>
+    <button
+        class="botao-carrinho"
+        onclick="abrirCarrinho()">
 
-            <a
-                href="bermudas.html"
-                class="ativo">
+        🛒
 
-                Bermudas & Shorts
+        <span id="contadorCarrinho">
+            0
+        </span>
 
-            </a>
+    </button>
 
-            <a href="ofertas.html">
-                Ofertas
-            </a>
 
-        </nav>
+</header>
+
+
+
+<main>
+
+
+    <section class="pagina-topo">
+
+        <span>
+            COLEÇÃO
+        </span>
+
+        <h1>
+            Bermudas & Shorts
+        </h1>
+
+        <p>
+            Encontre seu próximo short na ZYNLO.
+        </p>
+
+    </section>
+
+
+
+    <section class="secao">
+
+
+        <div class="produtos-grid">
+
+
+            <!-- SHORT PRETO -->
+
+            <article class="produto-card">
+
+
+                <div class="produto-foto">
+
+                    <img
+                        src="short-preto.jpg"
+                        alt="Short Preto">
+
+                </div>
+
+
+                <div class="produto-info">
+
+
+                    <span class="produto-categoria">
+                        SHORT
+                    </span>
+
+
+                    <h3>
+                        Short Preto
+                    </h3>
+
+
+                    <strong class="produto-preco">
+                        R$ 89,90
+                    </strong>
+
+
+                    <div class="tamanhos">
+
+                        <span>
+                            Tamanho:
+                        </span>
+
+
+                        <button
+                            onclick="selecionarTamanho(
+                                this,
+                                'Short Preto'
+                            )">
+
+                            38
+
+                        </button>
+
+                    </div>
+
+
+                    <p class="tamanho-escolhido">
+                        Nenhum tamanho selecionado
+                    </p>
+
+
+                    <span class="disponivel">
+                        ● Disponível
+                    </span>
+
+
+                    <button
+                        class="botao-comprar"
+                        onclick="comprarProduto(
+                            'Short Preto',
+                            '89,90',
+                            '38'
+                        )">
+
+                        Comprar pelo WhatsApp
+
+                    </button>
+
+
+                    <button
+                        class="botao-carrinho-produto"
+                        onclick="adicionarCarrinho(
+                            'Short Preto',
+                            89.90,
+                            'short-preto.jpg',
+                            '38'
+                        )">
+
+                        🛒 Adicionar ao carrinho
+
+                    </button>
+
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<div
+    id="fundoCarrinho"
+    class="fundo-carrinho"
+    onclick="fecharCarrinho()">
+</div>
+
+
+
+<aside
+    id="carrinho"
+    class="carrinho">
+
+
+    <div class="carrinho-topo">
+
+        <h2>
+            Seu carrinho
+        </h2>
 
 
         <button
-            class="botao-carrinho"
-            onclick="abrirCarrinho()">
+            onclick="fecharCarrinho()">
 
-            🛒
-
-            <span id="contadorCarrinho">
-                0
-            </span>
+            ✕
 
         </button>
 
-    </header>
-
-
-
-    <!-- =========================
-         CONTEÚDO
-    ========================== -->
-
-    <main>
-
-
-        <section class="pagina-topo">
-
-            <span>
-                COLEÇÃO
-            </span>
-
-            <h1>
-                Bermudas & Shorts
-            </h1>
-
-            <p>
-                Confira os shorts disponíveis na ZYNLO.
-            </p>
-
-        </section>
-
-
-
-        <section class="secao">
-
-            <div class="produtos-grid">
-
-
-                <!-- =========================
-                     SHORT PRETO
-                ========================== -->
-
-                <article class="produto-card">
-
-
-                    <div class="produto-foto">
-
-                        <img
-                            src="short-preto.jpg"
-                            alt="Short Preto">
-
-                    </div>
-
-
-
-                    <div class="produto-info">
-
-
-                        <span class="produto-categoria">
-                            SHORT
-                        </span>
-
-
-                        <h3>
-                            Short Preto
-                        </h3>
-
-
-                        <strong class="produto-preco">
-                            R$ 89,90
-                        </strong>
-
-
-
-                        <div class="tamanhos">
-
-                            <span>
-                                Tamanho:
-                            </span>
-
-
-                            <button
-                                onclick="selecionarTamanho(
-                                    this,
-                                    'Short Preto'
-                                )">
-
-                                38
-
-                            </button>
-
-                        </div>
-
-
-
-                        <p class="tamanho-escolhido">
-
-                            Nenhum tamanho selecionado
-
-                        </p>
-
-
-
-                        <span class="disponivel">
-
-                            ● Disponível
-
-                        </span>
-
-
-
-                        <button
-                            class="botao-comprar"
-                            onclick="comprarProduto(
-                                'Short Preto',
-                                '89,90',
-                                '38'
-                            )">
-
-                            Comprar pelo WhatsApp
-
-                        </button>
-
-
-
-                        <button
-                            class="botao-carrinho-produto"
-                            onclick="adicionarCarrinho(
-                                'Short Preto',
-                                89.90,
-                                'short-preto.jpg',
-                                '38'
-                            )">
-
-                            🛒 Adicionar ao carrinho
-
-                        </button>
-
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =========================
-         FUNDO DO CARRINHO
-    ========================== -->
-
-    <div
-        id="fundoCarrinho"
-        class="fundo-carrinho"
-        onclick="fecharCarrinho()">
     </div>
 
 
-
-    <!-- =========================
-         CARRINHO
-    ========================== -->
-
-    <aside
-        id="carrinho"
-        class="carrinho">
-
-
-        <div class="carrinho-topo">
-
-            <h2>
-                Seu carrinho
-            </h2>
-
-
-            <button
-                onclick="fecharCarrinho()">
-
-                ✕
-
-            </button>
-
-        </div>
-
-
-
-        <div
-            id="listaCarrinho"
-            class="lista-carrinho">
-
-            <p class="carrinho-vazio">
-
-                Seu carrinho está vazio.
-
-            </p>
-
-        </div>
-
-
-
-        <div class="carrinho-final">
-
-
-            <strong>
-
-                Total:
-
-                <span id="totalCarrinho">
-
-                    R$ 0,00
-
-                </span>
-
-            </strong>
-
-
-
-            <button
-                class="botao-comprar"
-                onclick="finalizarCarrinho()">
-
-                Comprar pelo WhatsApp
-
-            </button>
-
-
-        </div>
-
-
-    </aside>
-
-
-
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
-
-    <footer class="rodape">
-
-
-        <div class="logo">
-
-            <strong>
-                ZYNLO
-            </strong>
-
-            <span>
-                multimarcas
-            </span>
-
-        </div>
-
-
-
-        <div class="rodape-links">
-
-
-            <a href="index.html">
-                Início
-            </a>
-
-
-            <a href="camisas.html">
-                Camisas
-            </a>
-
-
-            <a href="bermudas.html">
-                Bermudas & Shorts
-            </a>
-
-
-            <a href="ofertas.html">
-                Ofertas
-            </a>
-
-
-        </div>
-
-
-
-        <a
-            class="whatsapp-rodape"
-            href="https://wa.me/5582994335034"
-            target="_blank">
-
-            WhatsApp
-
-        </a>
-
-
-
-        <p>
-            © 2026 ZYNLO Multimarcas
+    <div
+        id="listaCarrinho"
+        class="lista-carrinho">
+
+        <p class="carrinho-vazio">
+            Seu carrinho está vazio.
         </p>
 
-
-    </footer>
-
+    </div>
 
 
-    <script src="game.js"></script>
+    <div class="carrinho-final">
+
+        <strong>
+
+            Total:
+
+            <span id="totalCarrinho">
+                R$ 0,00
+            </span>
+
+        </strong>
+
+
+        <button
+            class="botao-comprar"
+            onclick="finalizarCarrinho()">
+
+            Comprar pelo WhatsApp
+
+        </button>
+
+    </div>
+
+
+</aside>
+
+
+
+<footer class="rodape">
+
+
+    <div class="logo">
+
+        <strong>
+            ZYNLO
+        </strong>
+
+        <span>
+            multimarcas
+        </span>
+
+    </div>
+
+
+    <div class="rodape-links">
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="camisas.html">
+            Camisas
+        </a>
+
+        <a href="bermudas.html">
+            Bermudas & Shorts
+        </a>
+
+        <a href="ofertas.html">
+            Ofertas
+        </a>
+
+    </div>
+
+
+    <a
+        class="whatsapp-rodape"
+        href="https://wa.me/5582994335034"
+        target="_blank">
+
+        WhatsApp
+
+    </a>
+
+
+    <p>
+        © 2026 ZYNLO Multimarcas
+    </p>
+
+
+</footer>
+
+
+
+<script src="game.js"></script>
 
 </body>
 
-    </html>
+                        </html>
